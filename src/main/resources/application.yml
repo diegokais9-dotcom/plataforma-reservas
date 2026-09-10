@@ -1,0 +1,31 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /
+
+spring:
+  application:
+    name: plataforma-reservas
+  datasource:
+    url: jdbc:mysql://localhost:3310/plataforma_reservas?useSSL=false&serverTimezone=UTC&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: false
+    properties:
+      hibernate:
+        format_sql: true
+        dialect: org.hibernate.dialect.MySQL8Dialect
+
+jwt:
+  secret: tu-clave-secreta-super-segura-para-produccion-cambiar-esto-1234567890-plataforma-reservas-2026
+  expiration: 86400000
+
+logging:
+  level:
+    root: INFO
+    com.reservas: DEBUG
+    org.springframework.security: DEBUG

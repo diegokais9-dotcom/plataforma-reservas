@@ -1,0 +1,19 @@
+package com.reservas.plataformareservas.dto;
+
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+public class LoginDto {
+    @NotBlank(message = "El email es requerido")
+    @Email(message = "El email debe ser válido")
+    private String email;
+
+    @NotBlank(message = "La contraseña es requerida")
+    private String password;
+}
