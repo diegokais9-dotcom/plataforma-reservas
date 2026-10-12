@@ -4,7 +4,7 @@ import com.reservas.plataformareservas.dto.JwtResponseDto;
 import com.reservas.plataformareservas.dto.LoginDto;
 import com.reservas.plataformareservas.dto.RegisterDto;
 import com.reservas.plataformareservas.service.AutenticacionService;
-import javax.validation.Valid;
+import jakarta.validation.Valid;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

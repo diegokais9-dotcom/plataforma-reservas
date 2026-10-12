@@ -2,6 +2,8 @@ server:
   port: 8080
   servlet:
     context-path: /
+  error:
+    include-message: always
 
 spring:
   application:
@@ -18,7 +20,6 @@ spring:
     properties:
       hibernate:
         format_sql: true
-        dialect: org.hibernate.dialect.MySQL8Dialect
 
 jwt:
   secret: tu-clave-secreta-super-segura-para-produccion-cambiar-esto-1234567890-plataforma-reservas-2026
@@ -27,5 +28,5 @@ jwt:
 logging:
   level:
     root: INFO
-    com.reservas: DEBUG
-    org.springframework.security: DEBUG
+    com.reservas: INFO
+    org.springframework.security: INFO
